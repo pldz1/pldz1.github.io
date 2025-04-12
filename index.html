@@ -1,4 +1,16 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.ico"><title>爬楼的猪 Code Space</title><style>/* 确保 #global-initial-loading 覆盖整个屏幕 */
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="icon" href="./favicon.ico" />
+    <title>爬楼的猪 CodeSpace</title>
+    <style>
+      /* 确保 #global-initial-loading 覆盖整个屏幕 */
       #global-initial-loading {
         position: fixed;
         inset: 0; /* top:0; left:0; right:0; bottom:0; */
@@ -55,7 +67,42 @@
         100% {
           background-position: 0% 50%;
         }
-      }</style><link href="css/app.7e90a07b.css" rel="preload" as="style"><link href="css/chunk-vendors.fbe96e65.css" rel="preload" as="style"><link href="js/app.9b48039e.js" rel="preload" as="script"><link href="js/chunk-vendors.9917d940.js" rel="preload" as="script"><link href="css/chunk-vendors.fbe96e65.css" rel="stylesheet"><link href="css/app.7e90a07b.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but the app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="global-initial-loading"><div class="global-progress-group"><div class="global-progress-text" id="global-progress-text">🚀 努力加载中: 0%</div><div class="global-loader"><div class="global-progress" id="global-progress-bar" style="width: 0%"></div></div></div></div><div id="app" style="display: none"></div><script>(function () {
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-0WmuNa3M.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index--zdf81Yi.css">
+  </head>
+
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but the app doesn't work properly without
+        JavaScript enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+
+    <!-- 1. 最初的加载蒙层 -->
+    <div id="global-initial-loading">
+      <div class="global-progress-group">
+        <div class="global-progress-text" id="global-progress-text">🚀 努力加载中: 0%</div>
+        <div class="global-loader">
+          <div
+            class="global-progress"
+            id="global-progress-bar"
+            style="width: 0%"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Vue 需要挂载的容器，先隐藏或留空 -->
+    <div id="app" style="display: none"></div>
+
+    <!-- ============================== -->
+    <!-- 3. 假进度逻辑  -->
+    <!-- ============================== -->
+    <script>
+      (function () {
         // 获取进度条相关元素
         var progressBar = document.getElementById("global-progress-bar");
         var progressText = document.getElementById("global-progress-text");
@@ -82,4 +129,7 @@
 
         // 把定时器ID也挂到window上，后续可在 main.js 里清除
         window._fakeProgressTimer = timer;
-      })();</script><script src="js/chunk-vendors.9917d940.js"></script><script src="js/app.9b48039e.js"></script></body></html>
+      })();
+    </script>
+  </body>
+</html>
